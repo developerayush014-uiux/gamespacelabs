@@ -38,9 +38,11 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-xl bg-[#DE6B48] flex items-center justify-center shadow-[0_4px_12px_rgba(222,107,72,0.35)] group-hover:shadow-[0_6px_20px_rgba(222,107,72,0.5)] transition-shadow">
-                <span className="text-white font-display font-black text-sm leading-none">G</span>
-              </div>
+              <img
+                src="https://cdn.discordapp.com/attachments/865420585437102090/1249046780096811111/image.png?ex=69ddcb36&is=69dc79b6&hm=950200640d532b5f1ee4437fd68e3ee50064acb0bda33b285426ff4b60f9686e"
+                alt="Company Logo"
+                className="w-8 h-8 object-contain transition-transform group-hover:scale-105"
+              />
               <span className="font-display font-bold text-[#2F4858] text-lg tracking-tight">
                 GameSpace<span className="text-[#DE6B48]"> Lab</span>
               </span>
