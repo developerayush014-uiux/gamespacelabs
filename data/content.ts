@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "GameSpace Lab",
   tagline: "Your Startup's Engineering Partner",
   phone: "+91 7065634862",
-  email: "hello@gamespacelab.com",
+  email: "gamespacelabs@gmail.com",
   socials: {
     twitter: "https://twitter.com/gamespacelab",
     linkedin: "https://linkedin.com/company/gamespacelab",

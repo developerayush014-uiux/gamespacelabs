@@ -17,7 +17,7 @@ export default function PrivacyPage() {
               { title: "1. Information We Collect", body: "We collect information you provide when filling out our contact form, including name, email, phone number, and project details. We use this information solely to respond to your inquiry and deliver our services." },
               { title: "2. How We Use It", body: "Your information is used to contact you about your project inquiry and deliver contracted services. We do not sell or share your data with third parties for marketing purposes." },
               { title: "3. Data Security", body: "We implement industry-standard security measures. All data is transmitted over encrypted connections (HTTPS)." },
-              { title: "4. Contact", body: "For privacy-related inquiries, email us at hello@gamespacelab.com." },
+              { title: "4. Contact", body: "For privacy-related inquiries, email us at gamespacelabs@gmail.com." },
             ].map(({ title, body }) => (
               <div key={title}>
                 <h2 className="font-display font-bold text-[#2F4858] text-lg mb-2">{title}</h2>

@@ -18,7 +18,7 @@ export default function TermsPage() {
               { title: "2. Payment", body: "Payment terms are defined in each project agreement. Standard terms are 50% upfront, 50% on delivery unless otherwise agreed in writing." },
               { title: "3. Intellectual Property", body: "Upon final payment, all custom-developed code and assets are transferred to the client. GameSpace Lab retains the right to showcase completed work in portfolios unless otherwise agreed." },
               { title: "4. Limitation of Liability", body: "GameSpace Lab's liability is limited to the amount paid for the specific engagement. We are not liable for indirect or consequential damages." },
-              { title: "5. Contact", body: "For inquiries, contact hello@gamespacelab.com." },
+              { title: "5. Contact", body: "For inquiries, contact gamespacelabs@gmail.com." },
             ].map(({ title, body }) => (
               <div key={title}>
                 <h2 className="font-display font-bold text-[#2F4858] text-lg mb-2">{title}</h2>
