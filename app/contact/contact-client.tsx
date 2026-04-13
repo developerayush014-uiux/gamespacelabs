@@ -182,10 +182,10 @@ export default function ContactClient() {
                 <div className="card p-5">
                   <p className="text-[#8FA3B0] text-xs font-mono uppercase tracking-widest mb-4">Budget Guide</p>
                   {[
-                    { range: "Under $5k", desc: "MVP or prototype" },
-                    { range: "$5k–$15k", desc: "Standard mobile app" },
-                    { range: "$15k–$30k", desc: "Multi-platform product" },
-                    { range: "$30k+", desc: "Enterprise scale" },
+                    { range: "Under ₹50k", desc: "MVP or prototype" },
+                    { range: "₹50k–₹75k", desc: "Standard mobile app" },
+                    { range: "₹75k–₹90k", desc: "Multi-platform product" },
+                    { range: "₹90k+", desc: "Enterprise scale" },
                   ].map(({ range, desc }) => (
                     <div key={range} className="flex justify-between py-2 border-b border-[rgba(47,72,88,0.06)] last:border-0">
                       <span className="text-[#DE6B48] text-sm font-display font-bold">{range}</span>
