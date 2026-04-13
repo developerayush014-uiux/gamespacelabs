@@ -36,8 +36,8 @@ export default function PhoneMockup({ className = "", children, color = "#DE6B48
             {/* Service cards inside phone */}
             <div className="px-3 space-y-2 flex-1">
               {[
-                { emoji: "🤖", label: "Android App", price: "From $5k", color: "#DE6B48" },
-                { emoji: "🍎", label: "iOS App", price: "From $5k", color: "#2F4858" },
+                { emoji: "🤖", label: "Android App", price: "From ₹50k", color: "#DE6B48" },
+                { emoji: "🍎", label: "iOS App", price: "From ₹100k", color: "#2F4858" },
                 { emoji: "🚀", label: "MVP Sprint", price: "8–12 weeks", color: "#EAB24A" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-2.5 bg-white rounded-xl px-3 py-2.5 shadow-[0_2px_8px_rgba(47,72,88,0.08)]">
