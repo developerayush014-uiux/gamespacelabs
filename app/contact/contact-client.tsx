@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import FadeUp from "@/components/ui/FadeUp";
 import { siteConfig, contactFormConfig } from "@/data/content";
 import { cn } from "@/lib/utils";
+import { submitToSpreadsheet } from "@/app/actions/submitContact"; 
 
 const schema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -66,10 +67,22 @@ export default function ContactClient() {
 
   const onSubmit = async (data: FormData) => {
     setSubmitting(true);
-    await new Promise(r => setTimeout(r, 2000));
-    setSubmitting(false);
-    setSubmitted(true);
-    toast.success("Message sent! We'll respond within 24 hours.");
+    
+    try {
+      // Call our secure server action
+      const result = await submitToSpreadsheet(data);
+
+      if (result.success) {
+        setSubmitted(true);
+        toast.success("Message sent! We'll respond within 24 hours.");
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Please try again later.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const toggleService = (val: string) => {
