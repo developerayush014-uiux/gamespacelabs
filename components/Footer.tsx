@@ -8,13 +8,13 @@ export default function Footer() {
       <div className="container-xl py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 mt-6">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <img
-                src="https://cdn.discordapp.com/attachments/865420585437102090/1249046780096811111/image.png?ex=69ddcb36&is=69dc79b6&hm=950200640d532b5f1ee4437fd68e3ee50064acb0bda33b285426ff4b60f9686e"
+              {/* <img
+                src="/images/Logo.png"
                 alt="Company Logo"
                 className="w-20 h-20 mx-auto mb-8 object-contain"
-              />
+              /> */}
               <span className="font-display font-bold text-white text-lg">GameSpace Lab</span>
             </Link>
             <p className="text-[#8FA3B0] text-sm leading-relaxed mb-5 max-w-xs">
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation */}
-          <div>
+          <div className="mt-6">
             <h3 className="font-display font-bold text-white text-sm mb-5 tracking-wide">Navigation</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Social + India badge */}
-          <div>
+          <div className="mt-6">
             <h3 className="font-display font-bold text-white text-sm mb-5 tracking-wide">Follow Us</h3>
             <div className="flex gap-3 mb-6">
               {[

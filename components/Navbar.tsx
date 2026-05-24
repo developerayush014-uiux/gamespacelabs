@@ -39,7 +39,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <img
-                src="https://cdn.discordapp.com/attachments/865420585437102090/1249046780096811111/image.png?ex=69ddcb36&is=69dc79b6&hm=950200640d532b5f1ee4437fd68e3ee50064acb0bda33b285426ff4b60f9686e"
+                src="/images/Logo.png"
                 alt="Company Logo"
                 className="w-8 h-8 object-contain transition-transform group-hover:scale-105"
               />
