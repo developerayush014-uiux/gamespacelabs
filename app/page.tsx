@@ -17,10 +17,10 @@ function StatItem({ value, suffix, label, delay }: { value: number; suffix: stri
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   return (
     <div ref={ref} className="text-center">
-      <div className="font-display font-black text-4xl md:text-5xl text-[#2F4858] mb-1">
+      <div className="font-display font-black text-4xl md:text-5xl text-[#b6c7d2] mb-1">
         {inView ? <CountUp end={value} duration={2.2} delay={delay} suffix={suffix} /> : `0${suffix}`}
       </div>
-      <p className="text-[#8FA3B0] text-sm font-medium">{label}</p>
+      <p className="text-[#99aebc] text-sm font-medium">{label}</p>
     </div>
   );
 }
