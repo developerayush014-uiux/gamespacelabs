@@ -4,6 +4,9 @@ import { ArrowRight } from "lucide-react";
 import FadeUp from "@/components/ui/FadeUp";
 import { founders, niches } from "@/data/content";
 
+const founderImage = "/images/Founder.jpg"; 
+const coFounderImage = "/images/Co-Founder.jpg";
+
 export const metadata: Metadata = {
   title: "About",
   description: "Meet the Netflix & Google engineers behind GameSpace Lab — India's fastest MVP launch partner.",
@@ -86,13 +89,24 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {founders.map((f, i) => (
               <FadeUp key={f.id} delay={i * 0.12}>
-                <div className="card p-8">
+                <div className="card p-8 flex flex-col items-start">
                   {/* Avatar placeholder */}
-                  <div className="w-20 h-20 rounded-2xl mb-5 flex items-center justify-center text-4xl"
-                    style={{ background: i === 0 ? "rgba(222,107,72,0.1)" : "rgba(47,72,88,0.08)" }}>
-                    {i === 0 ? "👨‍💻" : "👩‍💻"}
+                  <div
+                    className="w-20 h-20 rounded-2xl mb-5 flex items-center justify-center overflow-hidden bg-[#ECEFF1]"
+                    style={{ background: i === 0 ? "rgba(222,107,72,0.1)" : "rgba(47,72,88,0.08)" }}
+                  >
+                    <img
+                      src={i === 0 ? founderImage : coFounderImage}
+                      alt={i === 0 ? "Founder & CEO" : "Co-Founder & CTO"}
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
-                  <span className="badge badge-terra text-[10px] mb-3">{f.tag}</span>
+                  
+                  {/* Username & Badge Container (Stacked vertically) */}
+                  <div className="flex flex-col items-start gap-1 mb-4">
+                    <span className="text-[#8FA3B0] text-sm font-medium leading-none">{f.username}</span>
+                    <span className="badge badge-terra text-[10px] inline-block">{f.tag}</span>
+                  </div>
                   <h3 className="font-display font-bold text-[#2F4858] text-xl mb-0.5">{f.name}</h3>
                   <p className="text-[#DE6B48] font-display font-semibold text-sm mb-4">{f.role}</p>
                   <p className="text-[#4A6580] text-sm leading-relaxed mb-5">{f.bio}</p>
