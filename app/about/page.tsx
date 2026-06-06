@@ -89,7 +89,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {founders.map((f, i) => (
               <FadeUp key={f.id} delay={i * 0.12}>
-                <div className="card p-8 flex flex-col items-start">
+                {/* Changed from <div> to <a> to handle the dynamic LinkedIn routing */}
+                <a
+                  href={i === 0 ? "https://www.linkedin.com/in/akshansh--sharma/" : "https://www.linkedin.com/in/ayushkrdubey/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card p-8 flex flex-col items-start block hover:no-underline transition-all duration-300"
+                >
                   {/* Avatar placeholder */}
                   <div
                     className="w-20 h-20 rounded-2xl mb-5 flex items-center justify-center overflow-hidden bg-[#ECEFF1]"
@@ -101,21 +107,23 @@ export default function AboutPage() {
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
-                  
+
                   {/* Username & Badge Container (Stacked vertically) */}
                   <div className="flex flex-col items-start gap-1 mb-4">
                     <span className="text-[#8FA3B0] text-sm font-medium leading-none">{f.username}</span>
                     <span className="badge badge-terra text-[10px] inline-block">{f.tag}</span>
                   </div>
+
                   <h3 className="font-display font-bold text-[#2F4858] text-xl mb-0.5">{f.name}</h3>
                   <p className="text-[#DE6B48] font-display font-semibold text-sm mb-4">{f.role}</p>
                   <p className="text-[#4A6580] text-sm leading-relaxed mb-5">{f.bio}</p>
+
                   <div className="flex flex-wrap gap-2">
                     {f.skills.map((s) => (
                       <span key={s} className="px-2.5 py-1 rounded-lg bg-[rgba(47,72,88,0.06)] text-[#4A6580] text-xs font-medium">{s}</span>
                     ))}
                   </div>
-                </div>
+                </a>
               </FadeUp>
             ))}
           </div>
